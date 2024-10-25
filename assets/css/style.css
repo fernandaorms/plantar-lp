@@ -260,6 +260,20 @@ header {
         flex-direction: column;
     }
 
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4rem 0;
+        margin: 72px 0 6rem 0;
+
+        a {
+            font-size: 28px;
+            color: #263238;
+            font-weight: 600;
+        }
+    }
+
     .button.cta.light a {
         height: 56px;
         background: #45BA65;
