@@ -38,10 +38,10 @@ function menu($menu_items, $css_class=null) {
 }
 
 
-function button($link, $heading, $title, $icon = null, $css_class = null) {
+function button($link, $heading, $title, $icon = null, $css_class = null, $target='_self') {
     ?>
 
-    <a href='<?php echo($link['url']); ?>' title='<?php echo($link['title']); ?>' <?php if(!empty($css_class)) echo('class="' . $css_class . '"'); ?>>
+    <a href='<?php echo($link['url']); ?>' title='<?php echo($link['title']); ?>' <?php if(!empty($css_class)) echo('class="' . $css_class . '"'); ?> target='<?php echo($target); ?>'>
         <?php if(!empty($title)) heading($heading, $title); ?>
 
         <?php if(!empty($icon)) image($icon); ?>

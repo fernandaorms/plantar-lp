@@ -38,8 +38,8 @@ function smoothNavigation() {
 function toogleMenu(element) {
     element.classList.toggle('open');
 
-    const navElement = element.parentElement.parentElement.querySelector('.nav.responsiveness')
-    // const navElement = element.parentElement.parentElement.querySelector('.nav-v2.responsiveness')
+    const navElement = element.parentElement.parentElement.querySelector('.nav.responsiveness');
+    // const navElement = element.parentElement.parentElement.querySelector('.nav-v2.responsiveness');
     
     navElement.classList.toggle('open');
 }

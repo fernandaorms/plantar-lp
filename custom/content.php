@@ -86,7 +86,7 @@ $GLOBALS['social_medias'] = [
 // Hero
 $GLOBALS['hero'] = [
     'style' => [
-        'background_image' => $GLOBALS['images_path'] . 'hero-bg-v2.webp'
+        'background_image' => $GLOBALS['images_path'] . 'hero-bg.webp'
     ],
     'title' => [
         'heading' => 'h1',
@@ -282,5 +282,13 @@ $GLOBALS['cta'] = [
 
 // Footer
 $GLOBALS['footer'] = [
-    'copyright' => '© 2024 Plantar. Todos os direitos reservados.'
+    'copyright' => '© 2024 Plantar. Todos os direitos reservados.',
+    'powered_by' => [
+        'prefix' => 'Desenvolvido por:',
+        'title' => 'fernandaorms',
+        'link' => [
+            'url' => 'https://github.com/fernandaorms',
+            'title' => 'Github fernandaorms'
+        ]
+    ]
 ];
