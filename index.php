@@ -1,3 +1,17 @@
+
+<?php
+$GLOBALS['js_path'] = './assets/js/';
+$GLOBALS['css_path'] = './assets/css/';
+
+$GLOBALS['images_path'] = './assets/images/';
+$GLOBALS['icons_path'] = $GLOBALS['images_path'] . 'icons/';
+
+$GLOBALS['custom_path'] = './custom/';
+
+include($GLOBALS['custom_path'] . 'layout.php');
+include($GLOBALS['custom_path'] . 'content.php');
+?>
+
 <!DOCTYPE html>
 <html lang='pt-br'>
     <head>
@@ -6,20 +20,10 @@
         <meta name='description' content='Aprenda a cultivar de forma eficiente com dicas personalizadas do ChatGPT e artigos científicos. Transforme seu espaço com técnicas modernas e cursos exclusivos. Comece agora!'>
         <title>Descubra o Poder de Cultivar com Ciência e Tecnologia | Cultivo Inteligente</title>
 
-        <link rel='stylesheet' href='./assets/css/style.css'>
-        <script src='./assets/js/main.js'></script>
-        
-        <?php 
-        $GLOBALS['public_path'] = './';
+        <link rel='icon' href='<?php echo($GLOBALS['icons_path']);?>favicon.svg' type='image/svg+xml'>
 
-        $GLOBALS['images_path'] = $GLOBALS['public_path'] . 'assets/images/';
-        $GLOBALS['icons_path'] = $GLOBALS['images_path'] . 'icons/';
-
-        $GLOBALS['private_path'] = './custom/';
-        
-        include($GLOBALS['private_path'] . 'layout.php');
-        include($GLOBALS['private_path'] . 'content.php');
-        ?>
+        <link rel='stylesheet' href='<?php echo($GLOBALS['css_path']);?>style.css'>
+        <script src='<?php echo($GLOBALS['js_path']);?>main.js'></script>
     </head>
 
     <body>
@@ -281,11 +285,21 @@
                 </div>
 
                 <div class='bottom'>
-                    <div class='copyright'>
-                        <?php heading('span', $GLOBALS['footer']['copyright']); ?>
-                    </div>
+                    <div class='left'>
+                        <div class='copyright'>
+                            <?php heading('span', $GLOBALS['footer']['copyright']); ?>
+                        </div>
 
-                    <?php menu($GLOBALS['nav_menu'], 'nav-menu'); ?>
+                        <div class='powered-by'>
+                            <?php heading('span', $GLOBALS['footer']['powered_by']['prefix'], 'prefix'); ?>
+                            
+                            <?php button($GLOBALS['footer']['powered_by']['link'], 'span', $GLOBALS['footer']['powered_by']['title'], null, 'developer', '_blank'); ?>
+                        </div>
+                    </div>
+                    
+                    <div class='right'>
+                        <?php menu($GLOBALS['nav_menu'], 'nav-menu'); ?>
+                    </div>
                 </div>
             </div>
         </footer>
