@@ -2,6 +2,7 @@
 
 ## Screen
 
+![Landing Page Result](https://github.com/fernandaorms/plantar-lp/blob/main/screen/Plantar-LP.gif)
 
 ## Overview
 
